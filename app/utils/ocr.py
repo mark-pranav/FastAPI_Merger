@@ -1,0 +1,1 @@
+# OCR resume image helper
