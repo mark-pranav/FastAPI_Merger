@@ -12,9 +12,10 @@ import nltk
 router = APIRouter()
 
 # Download required NLTK data (ensure it is done only once in actual deployment)
-nltk.download('punkt')
-nltk.download('stopwords')
-nltk.download('averaged_perceptron_tagger')
+# nltk.download('punkt')
+# nltk.download('stopwords')
+# nltk.download('averaged_perceptron_tagger')
+nltk.data.path.append('./nltk_data')
 
 try:
     nlp = spacy.load("en_core_web_sm")

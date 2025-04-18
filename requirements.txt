@@ -19,4 +19,4 @@ python-dotenv
 google-generativeai
 torch
 tensorflow
-en-core-web-sm==3.8.0
+
