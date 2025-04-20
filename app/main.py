@@ -2,6 +2,7 @@ from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from app.routers import recommender, ats_scorer, gemini_ats
 from dotenv import load_dotenv
+import os
 load_dotenv()
 
 app = FastAPI(
