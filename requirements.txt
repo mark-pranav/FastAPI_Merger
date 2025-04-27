@@ -1,5 +1,4 @@
 fastapi
-os
 uvicorn
 pydantic
 pytesseract
