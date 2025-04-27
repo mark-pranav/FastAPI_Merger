@@ -1,8 +1,10 @@
+import uvicorn
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from app.routers import recommender, ats_scorer, gemini_ats
 from dotenv import load_dotenv
 import os
+
 load_dotenv()
 
 app = FastAPI(
@@ -10,6 +12,8 @@ app = FastAPI(
     description="Combines job recommendation, ATS scoring, and Gemini-based resume analysis.",
     version="1.0.0"
 )
+
+
 
 # CORS setup
 app.add_middleware(
@@ -29,3 +33,8 @@ app.include_router(gemini_ats.router, prefix="/api/feature", tags=["Gemini Analy
 def health():
     return {"status": "running"}
 # Entry point for FastAPI app
+
+
+if __name__ == "__main__":
+    port = int(os.environ.get("PORT", 10000))
+    uvicorn.run("main:app", host="0.0.0.0", port=port)

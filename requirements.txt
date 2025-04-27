@@ -1,4 +1,5 @@
 fastapi
+os
 uvicorn
 pydantic
 pytesseract
@@ -19,4 +20,4 @@ python-dotenv
 google-generativeai
 torch
 tensorflow
-
+mangum
