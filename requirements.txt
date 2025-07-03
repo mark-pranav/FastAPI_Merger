@@ -18,5 +18,5 @@ tqdm
 python-dotenv
 google-generativeai
 torch
-tensorflow
+tensorflow==2.10.1
 mangum
